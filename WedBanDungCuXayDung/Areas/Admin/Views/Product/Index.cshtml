@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ToolShopEntities.Context.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới sản phẩm", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên sản phẩm
+        </th>
+        <th>
+            Ảnh
+        </th>
+        <th>
+            Loại sản phẩm
+        </th>
+        <th>
+            Url sản phẩm
+        </th>
+        <th>
+            Chi tiết sản phẩm
+        </th>
+        <th>
+            Giá tiền
+        </th>
+        <th>
+            Giảm giá
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Slug)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceDiscount)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Chi tiết sản phẩm", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

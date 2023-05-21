@@ -1,0 +1,75 @@
+﻿@model ToolShopEntities.Context.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết sản phẩm</h2>
+
+<div>
+    <h4>Sản phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Ảnh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            Loại sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeId)
+        </dd>
+
+        <dt>
+            Url sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slug)
+        </dd>
+
+        <dt>
+            Chi tiết sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullDescription)
+        </dd>
+
+        <dt>
+            Giá tiền
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            Giảm giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceDiscount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Quay lại trang danh sách sản phẩm", "Index")
+</p>

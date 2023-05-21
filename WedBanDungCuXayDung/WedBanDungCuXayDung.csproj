@@ -50,6 +50,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -168,19 +170,74 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Context\Brand.cs">
+      <DependentUpon>ToolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Category.cs">
+      <DependentUpon>ToolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Order.cs">
+      <DependentUpon>ToolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\OrderDetail.cs">
+      <DependentUpon>ToolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Product.cs">
+      <DependentUpon>ToolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\sysdiagram.cs">
+      <DependentUpon>ToolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ToolShop.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolShop.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ToolShop.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ToolShop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolShop.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Context\User.cs">
+      <DependentUpon>ToolShop.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Common.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\PartialMetadataType.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProductMasterData.cs" />
+    <Compile Include="Models\UserMasterData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\admin\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\admin\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\admin\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\admin\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\admin\css\local.css" />
+    <Content Include="Content\admin\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\admin\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\admin\js\jquery-1.10.2.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -216,13 +273,74 @@
     <Content Include="Content\images\slider_bg.gif" />
     <Content Include="Content\images\thumb1.jpg" />
     <Content Include="Content\images\thumb2.jpg" />
+    <Content Include="Content\js\boxOver.js" />
     <Content Include="Content\style.css" />
+    <Content Include="Context\ToolShop.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ToolShop.edmx</DependentUpon>
+      <LastGenOutput>ToolShop.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Context\ToolShop.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ToolShop.edmx</DependentUpon>
+      <LastGenOutput>ToolShop.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Content\admin\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\admin\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\admin\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\admin\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\admin\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\admin\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\admin\font-awesome\less\core.less" />
+    <Content Include="Content\admin\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\admin\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\admin\font-awesome\less\icons.less" />
+    <Content Include="Content\admin\font-awesome\less\larger.less" />
+    <Content Include="Content\admin\font-awesome\less\list.less" />
+    <Content Include="Content\admin\font-awesome\less\mixins.less" />
+    <Content Include="Content\admin\font-awesome\less\path.less" />
+    <Content Include="Content\admin\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\admin\font-awesome\less\spinning.less" />
+    <Content Include="Content\admin\font-awesome\less\stacked.less" />
+    <Content Include="Content\admin\font-awesome\less\variables.less" />
+    <Content Include="Content\admin\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_core.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_list.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_path.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\admin\font-awesome\scss\_variables.scss" />
+    <EntityDeploy Include="Context\ToolShop.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ToolShop.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Context\ToolShop.edmx.diagram">
+      <DependentUpon>ToolShop.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -268,9 +386,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Detail\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -284,6 +405,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

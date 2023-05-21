@@ -1,0 +1,395 @@
+﻿
+@{
+    ViewBag.Title = "Trang quản trị Admin";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Admin</h2>
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Dashboard <small>Statistics and more</small></h1>
+            <div class="alert alert-dismissable alert-warning">
+                <button data-dismiss="alert" class="close" type="button">&times;</button>
+                Welcome to the admin dashboard! Feel free to review all pages and modify the layout to your needs.
+                <br />
+                This theme uses the <a href="https://www.shieldui.com">ShieldUI</a> JavaScript library for the
+                additional data visualization and presentation functionality illustrated here.
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Visits Based on a 10 days data</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="shieldui-chart1" class="shield-chart"><div id="shielddw" class="shield-container" style="position: relative; overflow: hidden; width: 850px; height: 400px; line-height: normal; z-index: 0; font-family: &quot;Segoe UI&quot;, Tahoma, Verdana, sans-serif; font-size: 12px; cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="850" height="400"><defs><clipPath id="shielddx"><rect rx="0" ry="0" fill="none" x="0" y="0" width="9999" height="400" stroke-width="0.000001"></rect></clipPath><clipPath id="shielddy"><rect fill="none" x="0" y="0" width="809" height="306"></rect></clipPath><filter id="37021407-69f7-4023-8d42-ec2434499d99" height="120%"><feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur><feComponentTransfer><feFuncA type="linear" slope="0.2"></feFuncA></feComponentTransfer><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><rect rx="0" ry="0" fill="#2D2D2D" x="0" y="0" width="850" height="400" stroke-width="0.000001"></rect><rect rx="0" ry="0" fill="#2D2D2D" x="31" y="40" width="809" height="306" stroke-width="0.000001"></rect><g zIndex="1"></g><g zIndex="1"><path fill="none" d="M 31 270.5 L 840 270.5" stroke="#7E7E7E" stroke-width="1" stroke-dasharray="8,3" zIndex="1"></path><path fill="none" d="M 31 193.5 L 840 193.5" stroke="#7E7E7E" stroke-width="1" stroke-dasharray="8,3" zIndex="1"></path><path fill="none" d="M 31 117.5 L 840 117.5" stroke="#7E7E7E" stroke-width="1" stroke-dasharray="8,3" zIndex="1"></path><path fill="none" d="M 31 40.5 L 840 40.5" stroke="#7E7E7E" stroke-width="1" stroke-dasharray="8,3" zIndex="1"></path><path fill="none" d="M 31 346.5 L 840 346.5" stroke="#7E7E7E" stroke-width="1" stroke-dasharray="8,3" zIndex="1"></path></g><g zIndex="2"><path fill="none" d="M 758.5 346 L 758.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 30.5 346 L 30.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 176.5 346 L 176.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 321.5 346 L 321.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 467.5 346 L 467.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 613.5 346 L 613.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 103.5 346 L 103.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 248.5 346 L 248.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 394.5 346 L 394.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 540.5 346 L 540.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 685.5 346 L 685.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 831.5 346 L 831.5 352" stroke="#7E7E7E" stroke-width="1"></path><path fill="none" d="M 31 346.5 L 840 346.5" stroke="#7E7E7E" stroke-width="1" zIndex="7" visibility="visible"></path></g><g zIndex="2"></g><g zIndex="3"><g visibility="visible" zIndex="0.1" transform="translate(31,40)" clip-path="url(#shielddy)"><path fill="rgb(30,151,227)" d="M 0 260.1 L 72.81728172817282 141.5 L 145.63456345634563 176 L 218.45184518451845 221.9 L 291.26912691269126 260.1 L 364.0864086408641 179.8 L 436.9036903690369 290.7 L 509.7209720972097 241 L 582.5382538253825 221.9 L 655.3555355535553 176 L 728.1728172817282 99.4 L 800.990099009901 49.7 L 800.990099009901 306 L 0 306" fill-opacity="0.75" zIndex="0"></path><path fill="none" d="M 0 260.1 L 72.81728172817282 141.5 L 145.63456345634563 176 L 218.45184518451845 221.9 L 291.26912691269126 260.1 L 364.0864086408641 179.8 L 436.9036903690369 290.7 L 509.7209720972097 241 L 582.5382538253825 221.9 L 655.3555355535553 176 L 728.1728172817282 99.4 L 800.990099009901 49.7" stroke="#1E97E3" stroke-width="2" zIndex="1"></path></g><g visibility="visible" zIndex="0.1" transform="translate(31,40)" clip-path="none"></g></g><text x="425" y="25" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;color:#FFFFFF;top:10;fill:#FFFFFF;" text-anchor="middle" zIndex="4"><tspan x="425">Visitors</tspan></text><g zIndex="7" transform="translate(394,371)"><g zIndex="1" clip-path="url(#shielddx)"><g><g zIndex="1" transform="translate(8,3)"><path fill="#1E97E3" d="M 1 6 L 11 6 11 16 1 16 Z" style="cursor:pointer;" stroke="#1E97E3" stroke-width="0.000001"></path><text x="17" y="15" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:12px;cursor:pointer;color:#A5A5A5;fill:#A5A5A5;" text-anchor="start" zIndex="2"><tspan x="17">Q Data</tspan></text></g></g></g></g><g zIndex="7"><text x="31" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="31">0</tspan></text><text x="759.1728172817282" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="759.1728172817282">10</tspan></text><text x="176.63456345634563" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="176.63456345634563">2</tspan></text><text x="322.26912691269126" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="322.26912691269126">4</tspan></text><text x="467.9036903690369" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="467.9036903690369">6</tspan></text><text x="613.5382538253825" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="613.5382538253825">8</tspan></text><text x="103.81728172817282" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="103.81728172817282">1</tspan></text><text x="249.45184518451845" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="249.45184518451845">3</tspan></text><text x="395.0864086408641" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="395.0864086408641">5</tspan></text><text x="540.7209720972097" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="540.7209720972097">7</tspan></text><text x="686.3555355535553" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="686.3555355535553">9</tspan></text><text x="831.990099009901" y="363" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="middle" visibility="visible"><tspan x="831.990099009901">11</tspan></text></g><g zIndex="7"><text x="23" y="351.1" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:385px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="end" visibility="visible"><tspan x="23">0</tspan></text><text x="23" y="274.6" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:385px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="end" visibility="visible"><tspan x="23">20</tspan></text><text x="23" y="198.1" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:385px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="end" visibility="visible"><tspan x="23">40</tspan></text><text x="23" y="121.6" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:385px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="end" visibility="visible"><tspan x="23">60</tspan></text><text x="23" y="45.1" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:385px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" text-anchor="end" visibility="visible"><tspan x="23">80</tspan></text></g><text x="36" y="60" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;cursor:pointer;color:#999999;fill:#999999;" text-anchor="start" zIndex="8"><tspan x="36">Demo Version</tspan></text><text x="835" y="60" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;cursor:pointer;color:#999999;fill:#999999;" text-anchor="end" zIndex="8"><tspan x="835">Demo Version</tspan></text><text x="36" y="341" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;cursor:pointer;color:#999999;fill:#999999;" text-anchor="start" zIndex="8"><tspan x="36">Demo Version</tspan></text><text x="835" y="341" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;cursor:pointer;color:#999999;fill:#999999;" text-anchor="end" zIndex="8"><tspan x="835">Demo Version</tspan></text><g zIndex="9"><g visibility="visible" zIndex="1" transform="translate(31,40)"><path fill="none" d="M -10 260.1 L 0 260.1 L 72.81728172817282 141.5 L 145.63456345634563 176 L 218.45184518451845 221.9 L 291.26912691269126 260.1 L 364.0864086408641 179.8 L 436.9036903690369 290.7 L 509.7209720972097 241 L 582.5382538253825 221.9 L 655.3555355535553 176 L 728.1728172817282 99.4 L 800.990099009901 49.7 L 810.990099009901 49.7" isTracker="true" stroke-linejoin="bevel" visibility="visible" stroke-opacity="0.0001" stroke="rgb(192,192,192)" stroke-width="22" style=""></path></g></g></svg></div><div class="shield-tooltip" style="pointer-events: none; display: none; top: 115px; left: 681px;"><div class="shield-tooltip-header">10</div><div class="shield-tooltip-value"><span>Q Data</span>: 54</div></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-rss"></i> Feed</h3>
+                </div>
+                <div class="panel-body feed">
+                    <section class="feed-item">
+                        <div class="icon pull-left">
+                            <i class="fa fa-comment"></i>
+                        </div>
+                        <div class="feed-item-body">
+                            <div class="text">
+                                <a href="#">John Doe</a> commented on <a href="#">What Makes Good Code Good</a>.
+                            </div>
+                            <div class="time pull-left">
+                                3 h
+                            </div>
+                        </div>
+                    </section>
+                    <section class="feed-item">
+                        <div class="icon pull-left">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="feed-item-body">
+                            <div class="text">
+                                <a href="#">Merge request #42</a> has been approved by <a href="#">Jessica Lori</a>.
+                            </div>
+                            <div class="time pull-left">
+                                10 h
+                            </div>
+                        </div>
+                    </section>
+                    <section class="feed-item">
+                        <div class="icon pull-left">
+                            <i class="fa fa-plus-square-o"></i>
+                        </div>
+                        <div class="feed-item-body">
+                            <div class="text">
+                                New user <a href="#">Greg Wilson</a> registered.
+                            </div>
+                            <div class="time pull-left">
+                                Today
+                            </div>
+                        </div>
+                    </section>
+                    <section class="feed-item">
+                        <div class="icon pull-left">
+                            <i class="fa fa-bolt"></i>
+                        </div>
+                        <div class="feed-item-body">
+                            <div class="text">
+                                Server fail level raises above normal. <a href="#">See logs</a> for details.
+                            </div>
+                            <div class="time pull-left">
+                                Yesterday
+                            </div>
+                        </div>
+                    </section>
+                    <section class="feed-item">
+                        <div class="icon pull-left">
+                            <i class="fa fa-archive"></i>
+                        </div>
+                        <div class="feed-item-body">
+                            <div class="text">
+                                <a href="#">Database usage report</a> is ready.
+                            </div>
+                            <div class="time pull-left">
+                                Yesterday
+                            </div>
+                        </div>
+                    </section>
+                    <section class="feed-item">
+                        <div class="icon pull-left">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        <div class="feed-item-body">
+                            <div class="text">
+                                <a href="#">Order #233985</a> needs additional processing.
+                            </div>
+                            <div class="time pull-left">
+                                Wednesday
+                            </div>
+                        </div>
+                    </section>
+                    <section class="feed-item">
+                        <div class="icon pull-left">
+                            <i class="fa fa-arrow-down"></i>
+                        </div>
+                        <div class="feed-item-body">
+                            <div class="text">
+                                <a href="#">Load more...</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Traffic Sources One month tracking </h3>
+                </div>
+                <div class="panel-body">
+                    <div id="shieldui-grid1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Logins per week</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="shieldui-chart2" class="shield-chart"><div id="shieldeb" class="shield-container" style="position: relative; overflow: hidden; width: 394px; height: 400px; line-height: normal; z-index: 0; font-family: &quot;Segoe UI&quot;, Tahoma, Verdana, sans-serif; font-size: 12px; cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="394" height="400"><defs><clipPath id="shieldec"><rect rx="0" ry="0" fill="none" x="0" y="0" width="9999" height="400" stroke-width="0.000001"></rect></clipPath><clipPath id="shielded"><rect fill="none" x="0" y="0" width="374" height="340"></rect></clipPath><filter id="034770ed-c447-4d1d-a417-580d9b11937b" height="120%"><feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur><feComponentTransfer><feFuncA type="linear" slope="0.2"></feFuncA></feComponentTransfer><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><rect rx="0" ry="0" fill="#2D2D2D" x="0" y="0" width="394" height="400" stroke-width="0.000001"></rect><rect rx="0" ry="0" fill="#2D2D2D" x="10" y="40" width="374" height="340" stroke-width="0.000001"></rect><g zIndex="3"></g><path fill="none" d="M 161.80557479071135 13.441379216211228 L 171.80557479071135 13.441379216211228 L 173.08070340200442 43.26206888931385" stroke-width="1" stroke="#FF2A00" visibility="visible" zIndex="3" transform="translate(10,40)"></path><path fill="none" d="M 23.476542856670733 194.87376686766652 L 33.47654285667073 194.87376686766652 L 61.10005850301917 190.13590651192052" stroke-width="1" stroke="#00FF9C" visibility="visible" zIndex="3" transform="translate(10,40)"></path><path fill="none" d="M 259.1210591603785 26.143336017578815 L 249.12105916037848 26.143336017578815 L 238.9075240822112 53.5446053475638" stroke-width="1" stroke="#1E97E3" visibility="visible" zIndex="3" transform="translate(10,40)"></path><path fill="none" d="M 341.8415569329504 226.9544305344815 L 331.8415569329504 226.9544305344815 L 305.8717365647694 216.10596757553265" stroke-width="1" stroke="#FF8000" visibility="visible" zIndex="3" transform="translate(10,40)"></path><text x="197" y="25" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;color:#FFFFFF;top:10;fill:#FFFFFF;" text-anchor="middle" zIndex="4"><tspan x="197">Traffic Per week</tspan></text><g zIndex="5" transform="translate(10,40)"><path fill="#1E97E3" d="M 186.97403166652887 42.50000264452686 A 127.5 127.5 0 0 1 281.83940942022844 84.78417740335841 L 187 170 A 0 0 0 0 0 187 170 Z" stroke="#FFFFFF" stroke-width="0.000001" stroke-linejoin="round"></path><path fill="rgb(192,192,192)" d="M 186.97403166652887 42.50000264452686 A 127.5 127.5 0 0 1 281.83940942022844 84.78417740335841 L 187 170 A 0 0 0 0 0 187 170 Z" isTracker="1682051890606" fill-opacity="0.0001" visibility="visible" style=""></path></g><g zIndex="5" transform="translate(10,40)"><path fill="#FF8000" d="M 281.83949463600356 84.78427224281045 A 127.5 127.5 0 0 1 199.5761766854783 296.878247859811 L 187 170 A 0 0 0 0 0 187 170 Z" stroke="#FFFFFF" stroke-width="0.000001" stroke-linejoin="round"></path><path fill="rgb(192,192,192)" d="M 281.83949463600356 84.78427224281045 A 127.5 127.5 0 0 1 199.5761766854783 296.878247859811 L 187 170 A 0 0 0 0 0 187 170 Z" isTracker="1682051890606" fill-opacity="0.0001" visibility="visible" style=""></path></g><g zIndex="5" transform="translate(10,40)"><path fill="#00FF9C" d="M 199.57604980722417 296.87826043592423 A 127.5 127.5 0 0 1 159.37608882275032 45.5284388654524 L 187 170 A 0 0 0 0 0 187 170 Z" stroke="#FFFFFF" stroke-width="0.000001" stroke-linejoin="round"></path><path fill="rgb(192,192,192)" d="M 199.57604980722417 296.87826043592423 A 127.5 127.5 0 0 1 159.37608882275032 45.5284388654524 L 187 170 A 0 0 0 0 0 187 170 Z" isTracker="1682051890606" fill-opacity="0.0001" visibility="visible" style=""></path></g><g zIndex="5" transform="translate(10,40)"><path fill="#FF2A00" d="M 159.37621329432528 45.528411241603465 A 127.5 127.5 0 0 1 186.95027750221234 42.50000969539954 L 187 170 A 0 0 0 0 0 187 170 Z" stroke="#FFFFFF" stroke-width="0.000001" stroke-linejoin="round"></path><path fill="rgb(192,192,192)" d="M 159.37621329432528 45.528411241603465 A 127.5 127.5 0 0 1 186.95027750221234 42.50000969539954 L 187 170 A 0 0 0 0 0 187 170 Z" isTracker="1682051890606" fill-opacity="0.0001" visibility="visible" style=""></path></g><g visibility="visible" zIndex="6" transform="translate(10,40)"><g zIndex="1" style="" transform="translate(261,16.143336017578815)" visibility="visible"><rect rx="0" ry="0" fill="none" x="0" y="0" width="23" height="21" stroke-width="0.000001"></rect><text x="3" y="15" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" zIndex="1"><tspan x="3">123</tspan></text></g><g zIndex="1" style="" transform="translate(344,216.9544305344815)" visibility="visible"><rect rx="0" ry="0" fill="none" x="0" y="0" width="23" height="21" stroke-width="0.000001"></rect><text x="3" y="15" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" zIndex="1"><tspan x="3">323</tspan></text></g><g zIndex="1" style="" transform="translate(0,184.87376686766652)" visibility="visible"><rect rx="0" ry="0" fill="none" x="0" y="0" width="24" height="21" stroke-width="0.000001"></rect><text x="0" y="15" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" zIndex="1"><tspan x="0">443</tspan></text></g><g zIndex="1" style="" transform="translate(145,3.441379216211228)" visibility="visible"><rect rx="0" ry="0" fill="none" x="0" y="0" width="17" height="21" stroke-width="0.000001"></rect><text x="0" y="15" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#7E7E7E;line-height:14px;fill:#7E7E7E;" zIndex="1"><tspan x="0">32</tspan></text></g></g><g zIndex="7"><g zIndex="1" clip-path="url(#shieldec)"><g></g></g></g><text x="15" y="60" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;cursor:pointer;color:#999999;fill:#999999;" text-anchor="start" zIndex="8"><tspan x="15">Demo Version</tspan></text><text x="379" y="60" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;cursor:pointer;color:#999999;fill:#999999;" text-anchor="end" zIndex="8"><tspan x="379">Demo Version</tspan></text><text x="15" y="375" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;cursor:pointer;color:#999999;fill:#999999;" text-anchor="start" zIndex="8"><tspan x="15">Demo Version</tspan></text><text x="379" y="375" style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;cursor:pointer;color:#999999;fill:#999999;" text-anchor="end" zIndex="8"><tspan x="379">Demo Version</tspan></text><g zIndex="9"></g></svg></div><div class="shield-tooltip" style="pointer-events: none; display: none; top: 218px; left: 199px;"><div class="shield-tooltip-header">traffic</div><div class="shield-tooltip-value"><span>Sector</span>: 323</div></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-magnet"></i> Server Overview</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="server-stats">
+                        <li>
+                            <div class="key pull-right">CPU</div>
+                            <div class="stat">
+                                <div class="info">60% / 37°C / 3.3 Ghz</div>
+                                <div class="progress progress-small">
+                                    <div style="width: 70%;" class="progress-bar progress-bar-danger"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key pull-right">Mem</div>
+                            <div class="stat">
+                                <div class="info">29% / 4GB (16 GB)</div>
+                                <div class="progress progress-small">
+                                    <div style="width: 29%;" class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key pull-right">LAN</div>
+                            <div class="stat">
+                                <div class="info">6 Mb/s <i class="fa fa-caret-down"></i>&nbsp; 3 Mb/s <i class="fa fa-caret-up"></i></div>
+                                <div class="progress progress-small">
+                                    <div style="width: 48%;" class="progress-bar progress-bar-inverse"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4">
+            <header>
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-toggle="tab" href="#stats">Users</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#report">Favorites</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#dropdown1">Commenters</a>
+                    </li>
+                </ul>
+            </header>
+            <div class="body tab-content">
+                <div class="tab-pane clearfix active" id="stats">
+                    <h5 class="tab-header"><i class="fa fa-calendar-o fa-2x"></i> Last logged-in users</h5>
+                    <ul class="news-list">
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Ivan Gorge</a></div>
+                                <div class="position">Software Engineer</div>
+                                <div class="time">Last logged-in: Mar 12, 11:11</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Roman Novak</a></div>
+                                <div class="position">Product Designer</div>
+                                <div class="time">Last logged-in: Mar 12, 19:02</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Teras Uotul</a></div>
+                                <div class="position">Chief Officer</div>
+                                <div class="time">Last logged-in: Jun 16, 2:34</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Deral Ferad</a></div>
+                                <div class="position">Financial Assistant</div>
+                                <div class="time">Last logged-in: Jun 18, 4:20</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Konrad Polerd</a></div>
+                                <div class="position">Sales Manager</div>
+                                <div class="time">Last logged-in: Jun 18, 5:13</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="report">
+                    <h5 class="tab-header"><i class="fa fa-star fa-2x"></i> Popular contacts</h5>
+                    <ul class="news-list news-list-no-hover">
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Pol Johnsson</a></div>
+                                <div class="options">
+                                    <button class="btn btn-xs btn-success">
+                                        <i class="fa fa-phone"></i>
+                                        Call
+                                    </button>
+                                    <button class="btn btn-xs btn-warning">
+                                        <i class="fa fa-envelope-o"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Terry Garel</a></div>
+                                <div class="options">
+                                    <button class="btn btn-xs btn-success">
+                                        <i class="fa fa-phone"></i>
+                                        Call
+                                    </button>
+                                    <button class="btn btn-xs btn-warning">
+                                        <i class="fa fa-envelope-o"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Eruos Forkal</a></div>
+                                <div class="options">
+                                    <button class="btn btn-xs btn-success">
+                                        <i class="fa fa-phone"></i>
+                                        Call
+                                    </button>
+                                    <button class="btn btn-xs btn-warning">
+                                        <i class="fa fa-envelope-o"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Remus Reier</a></div>
+                                <div class="options">
+                                    <button class="btn btn-xs btn-success">
+                                        <i class="fa fa-phone"></i>
+                                        Call
+                                    </button>
+                                    <button class="btn btn-xs btn-warning">
+                                        <i class="fa fa-envelope-o"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Lover Lund</a></div>
+                                <div class="options">
+                                    <button class="btn btn-xs btn-success">
+                                        <i class="fa fa-phone"></i>
+                                        Call
+                                    </button>
+                                    <button class="btn btn-xs btn-warning">
+                                        <i class="fa fa-envelope-o"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="dropdown1">
+                    <h5 class="tab-header"><i class="fa fa-comments fa-2x"></i> Top Commenters</h5>
+                    <ul class="news-list">
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Edin Garey</a></div>
+                                <div class="comment">
+                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                                    aut odit aut fugit,sed quia
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Firel Lund</a></div>
+                                <div class="comment">
+                                    Duis aute irure dolor in reprehenderit in voluptate velit
+                                    esse cillum dolore eu fugiat.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Jessica Desingter</a></div>
+                                <div class="comment">
+                                    Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Novel Forel</a></div>
+                                <div class="comment">
+                                    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-user fa-4x pull-left"></i>
+                            <div class="news-item-info">
+                                <div class="name"><a href="#">Wedol Reier</a></div>
+                                <div class="comment">
+                                    Laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis
+                                    et quasi.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
