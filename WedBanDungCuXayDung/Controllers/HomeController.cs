@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ToolShopEntities.Context;
+using WedBanDungCuXayDung.Models;
 
 namespace WedBanDungCuXayDung.Controllers
 {
     public class HomeController : Controller
     {
+        ToolShop objWebBanDungCuXayDung = new ToolShop();
         public ActionResult Index()
         {
-            return View();
+            HomeModel objHomeModel = new HomeModel();
+
+            objHomeModel.ListCategory = objWebBanDungCuXayDung.Categories.ToList();
+            objHomeModel.ListProduct = objWebBanDungCuXayDung.Products.ToList();
+            return View(objHomeModel);
         }
 
         public ActionResult About()

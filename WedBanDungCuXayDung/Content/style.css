@@ -16,7 +16,7 @@ width:1000px;
 height:auto;
 margin:auto;
 padding:0px;
-background-color:#FFFFFF;
+background-color:#violet;
 }
 #header{
 width:1000px;
@@ -32,21 +32,7 @@ padding:45px 0 0 15px;
 #main_content{
 clear:both;
 }
-.languages{
-float:right;
-width:150px;
-padding:8px 0 0 0;
-}
-.lang_text{
-float:left;
-padding:0 5px 0 0;
-color:#1DA1CF;
-}
-a.lang{
-display:block;
-float:left;
-padding:0 5px 0 5px;
-}
+
 .top_right{
 width:728px;
 float:right;
